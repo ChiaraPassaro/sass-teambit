@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: $fontFamilyDefault,
+}
+
+//LINKS
+a{
+  color: $linkColorDefault;
+  text-decoration: none;
+  &:hover,
+  &:active,
+  &:focus{
+    color: $linkColorHoverDefault;
+  }
+}
+
+//BUTTONS
+.btn{
+  display: inline-block;
+  padding: $btnPadding;
+  border-radius: $btnBorderRadius;
+  border: 1px solid $btnDefaultBorderColor;
+  background: $btnDefaultBgColor;
+  transition: background 0.5s;
+  &--white{
+    color: $btnWhiteColor;
+    border-color: $btnWhiteBorderColor;
+    &:hover,
+    &:active,
+    &:focus{
+      color: $btnWhiteHoverColor;
+      background: $btnWhiteHoverBgColor;
+    }
+  }
+
+}

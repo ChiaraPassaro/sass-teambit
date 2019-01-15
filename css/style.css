@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #5c4634;
+  text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #2c4792;
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #5c4634;
+  background: #fff;
+  transition: background 0.5s;
+}
+
+.btn--white {
+  color: #2c4792;
+  border-color: #2c4792;
+}
+
+.btn--white:hover,
+.btn--white:active,
+.btn--white:focus {
+  color: #fff;
+  background: #2c4792;
+}
+
