@@ -9,6 +9,10 @@ body{
   font-size: $fontSizeDefault;
 }
 
+.wrapper{
+  position: relative;
+}
+
 //LINKS
 a{
   color: $linkColorDefault;
