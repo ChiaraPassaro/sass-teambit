@@ -5,7 +5,8 @@
 }
 
 body{
-  font-family: $fontFamilyDefault,
+  font-family: $fontFamilyDefault;
+  font-size: $fontSizeDefault;
 }
 
 //LINKS
@@ -14,7 +15,8 @@ a{
   text-decoration: none;
   &:hover,
   &:active,
-  &:focus{
+  &:focus,
+  &.active{
     color: $linkColorHoverDefault;
   }
 }
@@ -37,5 +39,7 @@ a{
       background: $btnWhiteHoverBgColor;
     }
   }
-
+  &__logo{
+    height: $btnLogoHeight;
+  }
 }

@@ -1,3 +1,29 @@
+@charset "UTF-8";
+
+h1 {
+  font-size: 3.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.1666666667em;
+}
+
+h4 {
+  font-size: 0.875em;
+}
+
+h5 {
+  font-size: 0.7em;
+}
+
+h6 {
+  font-size: 0.5833333333em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +32,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 a {
@@ -15,13 +42,14 @@ a {
 
 a:hover,
 a:active,
-a:focus {
+a:focus,
+a.active {
   color: #2c4792;
 }
 
 .btn {
   display: inline-block;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #5c4634;
   background: #fff;
@@ -38,5 +66,88 @@ a:focus {
 .btn--white:focus {
   color: #fff;
   background: #2c4792;
+}
+
+.btn__logo {
+  height: 10px;
+}
+
+.header {
+  height: 70px;
+}
+
+.header__nav {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px solid #5c4634;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav__items {
+  list-style: none;
+}
+
+.nav__item {
+  display: inline-block;
+  padding: 10px;
+  line-height: 30px;
+  position: relative;
+}
+
+.nav__item .nav__link:not(:only-child)::after {
+  content: "\F0D7";
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin-left: 5px;
+}
+
+.nav__item:hover .nav__link,
+.nav__item:active .nav__link,
+.nav__item:focus .nav__link {
+  color: #2c4792;
+}
+
+.nav__item:hover .nav__subitems,
+.nav__item:active .nav__subitems,
+.nav__item:focus .nav__subitems {
+  display: block;
+  position: absolute;
+  top: calc($navLineHeigh + 10px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 110%;
+}
+
+.nav__item .nav__subitems {
+  display: none;
+  background: #fff;
+  border: 1px solid #e1ddd4;
+  border-radius: 7px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav__item .nav__subitems .nav__item {
+  display: block;
+}
+
+.nav__item .nav__subitems .nav__item .nav__link {
+  color: #5c4634;
+}
+
+.nav__item .nav__subitems .nav__item .nav__link:hover,
+.nav__item .nav__subitems .nav__item .nav__link:active,
+.nav__item .nav__subitems .nav__item .nav__link:focus {
+  color: #2c4792;
 }
 

@@ -2,21 +2,39 @@
 $blueColor: #2c4792;
 $brownColor: #5c4634;
 $whiteColor: #fff;
+$blackColor: #000;
 
 //Typografy
 $fontFamilyDefault: 'Montserrat', sans-serif;
 $fontColorDefault: $brownColor;
+$fontSizeDefault: 14px;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 3.5em / $i;
+  }
+}
 
 //Links
 $linkColorDefault: $brownColor;
 $linkColorHoverDefault: $blueColor;
 
 // Buttons
-$btnPadding: 5px;
+$btnPadding: 5px 10px;
 $btnBorderRadius: 5px;
+$btnLogoHeight: 10px;
 $btnDefaultBorderColor: $brownColor;
 $btnDefaultBgColor: $whiteColor;
 $btnWhiteColor: $blueColor;
 $btnWhiteHoverColor: $whiteColor;
 $btnWhiteHoverBgColor: $blueColor;
 $btnWhiteBorderColor : $blueColor;
+
+//header
+$headerHeigh: 70px;
+
+//nav
+$navLineHeigh: 30px;
+$navSubBgColor: #fff;
+$navSubBorderColor: #e1ddd4;
+$navSubBorderRadius: 7px;

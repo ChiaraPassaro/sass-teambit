@@ -1,0 +1,71 @@
+.header{
+  height: $headerHeigh;
+  &__nav{
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 1px solid $brownColor;
+  }
+}
+
+//Nav
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  &__logo{
+
+  }
+  &__items{
+    list-style: none;
+  }
+  &__item{
+    display: inline-block;
+    padding: 10px;
+    line-height: $navLineHeigh;
+    position: relative;
+    .nav__link:not(:only-child)::after{
+      content:"\f0d7";
+      display: inline-block;
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      margin-left: 5px;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+      .nav__link{
+        color: $linkColorHoverDefault;
+      }
+      .nav__subitems{
+        display: block;
+        position: absolute;
+        top: calc($navLineHeigh + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110%;
+      }
+    }
+    .nav__subitems{
+      display: none;
+      background: $navSubBgColor;
+      border: 1px solid $navSubBorderColor;
+      border-radius: $navSubBorderRadius;
+      box-shadow: 0px 2px 3px rgba($blackColor, .2);
+      .nav__item{
+        display: block;
+        .nav__link{
+          color: $linkColorDefault;
+          &:hover,
+          &:active,
+          &:focus{
+            color: $linkColorHoverDefault;
+          }
+        }
+      }
+    }
+  }
+}
