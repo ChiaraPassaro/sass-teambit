@@ -1,0 +1,21 @@
+//Jumbotron
+.jumbotron{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  background: url('../img/illustration-main.jpg') top right no-repeat;
+  background-size: contain;
+  &__content{
+    width: 50%;
+  }
+  &__text{
+    margin: 20px 0;
+    font-size: 130%;
+    line-height: $lineHeightDefault * 1.2;
+  }
+  &__buttons{
+    a{
+      margin: 15px 0;
+    }
+  }
+}

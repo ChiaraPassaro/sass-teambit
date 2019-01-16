@@ -7,10 +7,25 @@
 body{
   font-family: $fontFamilyDefault;
   font-size: $fontSizeDefault;
+  color: $fontColorDefault;
+  line-height: $lineHeightDefault;
 }
 
 .wrapper{
   position: relative;
+}
+
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+//Typografy
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $headingFontSizeMax / $i;
+    line-height: $headingLineHeightMax / $i;
+  }
 }
 
 //LINKS
@@ -23,6 +38,16 @@ a{
   &.active{
     color: $linkColorHoverDefault;
   }
+  &.link-arrow::after{
+    content:"\f061";
+    display: inline-block;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    margin-left: 5px;
+  }
 }
 
 //BUTTONS
@@ -32,7 +57,12 @@ a{
   border-radius: $btnBorderRadius;
   border: 1px solid $btnDefaultBorderColor;
   background: $btnDefaultBgColor;
+  font-weight: bold;
   transition: background 0.5s;
+  &__logo{
+    height: $btnLogoHeight;
+    vertical-align: middle;
+  }
   &--white{
     color: $btnWhiteColor;
     border-color: $btnWhiteBorderColor;
@@ -43,7 +73,16 @@ a{
       background: $btnWhiteHoverBgColor;
     }
   }
-  &__logo{
-    height: $btnLogoHeight;
+  &--blue{
+    background: $btnBlueBgColor;
+    color: $btnBlueColor;
+    border-color: $btnBlueBorderColor;
+    &:hover,
+    &:active,
+    &:focus{
+      color: $btnWhiteHoverColor;
+      background: $btnBlueHoverBgColor;
+    }
   }
+
 }

@@ -1,29 +1,4 @@
 @charset "UTF-8";
-
-h1 {
-  font-size: 3.5em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-h3 {
-  font-size: 1.1666666667em;
-}
-
-h4 {
-  font-size: 0.875em;
-}
-
-h5 {
-  font-size: 0.7em;
-}
-
-h6 {
-  font-size: 0.5833333333em;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -33,22 +8,65 @@ h6 {
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  color: #5c4634;
+  line-height: 24px;
 }
 
 .wrapper {
   position: relative;
 }
 
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 1.4em;
+  line-height: 0.75em;
+}
+
+h3 {
+  font-size: 0.9333333333em;
+  line-height: 0.5em;
+}
+
+h4 {
+  font-size: 0.7em;
+  line-height: 0.375em;
+}
+
+h5 {
+  font-size: 0.56em;
+  line-height: 0.3em;
+}
+
+h6 {
+  font-size: 0.4666666667em;
+  line-height: 0.25em;
+}
+
 a {
   color: #5c4634;
   text-decoration: none;
 }
-
-a:hover,
-a:active,
-a:focus,
-a.active {
+a:hover, a:active, a:focus, a.active {
   color: #2c4792;
+}
+a.link-arrow::after {
+  content: "\F061";
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin-left: 5px;
 }
 
 .btn {
@@ -57,35 +75,39 @@ a.active {
   border-radius: 5px;
   border: 1px solid #5c4634;
   background: #fff;
+  font-weight: bold;
   transition: background 0.5s;
 }
-
+.btn__logo {
+  height: 20px;
+  vertical-align: middle;
+}
 .btn--white {
   color: #2c4792;
   border-color: #2c4792;
 }
-
-.btn--white:hover,
-.btn--white:active,
-.btn--white:focus {
+.btn--white:hover, .btn--white:active, .btn--white:focus {
   color: #fff;
   background: #2c4792;
 }
-
-.btn__logo {
-  height: 10px;
+.btn--blue {
+  background: #2c4792;
+  color: #fff;
+  border-color: #2c4792;
+}
+.btn--blue:hover, .btn--blue:active, .btn--blue:focus {
+  color: #fff;
+  background: #20346b;
 }
 
 .header {
   height: 70px;
   border-bottom: 1px solid #5c4634;
 }
-
 .header__nav {
   width: 80%;
   margin: 0 auto;
 }
-
 .header.fixed {
   position: fixed;
   top: 0;
@@ -100,18 +122,15 @@ a.active {
   align-items: center;
   height: 100%;
 }
-
 .nav__items {
   list-style: none;
 }
-
 .nav__item {
   display: inline-block;
   padding: 10px;
   line-height: 30px;
   position: relative;
 }
-
 .nav__item .nav__link:not(:only-child)::after {
   content: "\F0D7";
   display: inline-block;
@@ -122,16 +141,10 @@ a.active {
   text-rendering: auto;
   margin-left: 5px;
 }
-
-.nav__item:hover .nav__link,
-.nav__item:active .nav__link,
-.nav__item:focus .nav__link {
+.nav__item:hover .nav__link, .nav__item:active .nav__link, .nav__item:focus .nav__link {
   color: #2c4792;
 }
-
-.nav__item:hover .nav__subitems,
-.nav__item:active .nav__subitems,
-.nav__item:focus .nav__subitems {
+.nav__item:hover .nav__subitems, .nav__item:active .nav__subitems, .nav__item:focus .nav__subitems {
   display: block;
   position: absolute;
   top: calc($navLineHeigh + 10px);
@@ -140,7 +153,6 @@ a.active {
           transform: translateX(-50%);
   width: 110%;
 }
-
 .nav__item .nav__subitems {
   display: none;
   background: #fff;
@@ -148,18 +160,31 @@ a.active {
   border-radius: 7px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
-
 .nav__item .nav__subitems .nav__item {
   display: block;
 }
-
 .nav__item .nav__subitems .nav__item .nav__link {
   color: #5c4634;
 }
-
-.nav__item .nav__subitems .nav__item .nav__link:hover,
-.nav__item .nav__subitems .nav__item .nav__link:active,
-.nav__item .nav__subitems .nav__item .nav__link:focus {
+.nav__item .nav__subitems .nav__item .nav__link:hover, .nav__item .nav__subitems .nav__item .nav__link:active, .nav__item .nav__subitems .nav__item .nav__link:focus {
   color: #2c4792;
 }
 
+.jumbotron {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+  background: url("../img/illustration-main.jpg") top right no-repeat;
+  background-size: contain;
+}
+.jumbotron__content {
+  width: 50%;
+}
+.jumbotron__text {
+  margin: 20px 0;
+  font-size: 130%;
+  line-height: 28.8px;
+}
+.jumbotron__buttons a {
+  margin: 15px 0;
+}

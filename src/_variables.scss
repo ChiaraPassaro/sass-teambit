@@ -8,12 +8,10 @@ $blackColor: #000;
 $fontFamilyDefault: 'Montserrat', sans-serif;
 $fontColorDefault: $brownColor;
 $fontSizeDefault: 14px;
+$lineHeightDefault: 24px;
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: 3.5em / $i;
-  }
-}
+$headingFontSizeMax: 2.8em;
+$headingLineHeightMax: 1.5em;
 
 //Links
 $linkColorDefault: $brownColor;
@@ -22,13 +20,18 @@ $linkColorHoverDefault: $blueColor;
 // Buttons
 $btnPadding: 5px 10px;
 $btnBorderRadius: 5px;
-$btnLogoHeight: 10px;
+$btnLogoHeight: 20px;
 $btnDefaultBorderColor: $brownColor;
 $btnDefaultBgColor: $whiteColor;
 $btnWhiteColor: $blueColor;
 $btnWhiteHoverColor: $whiteColor;
 $btnWhiteHoverBgColor: $blueColor;
 $btnWhiteBorderColor : $blueColor;
+$btnBlueColor: $whiteColor;
+$btnBlueBgColor: $blueColor;
+$btnBlueHoverColor: $blueColor;
+$btnBlueHoverBgColor: darken($btnBlueBgColor, 10%);
+$btnBlueBorderColor : $blueColor;
 
 //header
 $headerHeigh: 70px;
