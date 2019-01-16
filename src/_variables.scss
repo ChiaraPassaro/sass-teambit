@@ -17,7 +17,7 @@ $headingLineHeightMax: 1.7em;
 //Links
 $linkColorDefault: $brownColor;
 $linkColorHoverDefault: $blueColor;
-
+$lineHeightLinkArrow: 4em;
 // Buttons
 $btnPadding: 5px 10px;
 $btnBorderRadius: 5px;
@@ -42,6 +42,14 @@ $navLineHeigh: 30px;
 $navSubBgColor: #fff;
 $navSubBorderColor: #e1ddd4;
 $navSubBorderRadius: 7px;
+
+//QUOTE-BOX
+$quoteBoxBgColor: $whiteColor;
+$quoteBoxBorderColor: $blueColor;
+$quoteBoxBorderRadius: 10px;
+$quoteBoxPadding: 20px;
+$quoteQuoteColor: $blueColor;
+$quoteNameColor: $blueColor;
 
 //MEDIA QUERY
 $breackSmall: 998px;

@@ -1,3 +1,14 @@
+@mixin fontawesome($content, $marginLeft, $fontWeight) {
+  content: $content;
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: $fontWeight;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin-left: $marginLeft;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -36,15 +47,18 @@ a{
   &.active{
     color: $linkColorHoverDefault;
   }
-  &.link-arrow::after{
-    content:"\f061";
-    display: inline-block;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    margin-left: 5px;
+  &.link-arrow{
+    line-height: $lineHeightLinkArrow;
+    &::after{
+      content:"\f061";
+      display: inline-block;
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      margin-left: 5px;
+    }
   }
 }
 

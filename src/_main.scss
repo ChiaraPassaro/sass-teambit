@@ -3,6 +3,7 @@
   margin: 0 auto;
   &__row{
     width: 100%;
+    padding: 50px 0;
     &--bisque{
       background: $pinkBisqueColor;
     }
@@ -15,6 +16,7 @@
   overflow: hidden;
   &__row{
     width: 100%;
+    margin-bottom: 30px;
     &:after{
       content: '';
       display: table;
@@ -26,9 +28,14 @@
     }
   }
   &__title{
-    margin: 80px 0;
+    &__icon{
+      vertical-align: sub;
+      margin-left: 5px;
+      height: $lineHeightDefault;
+    }
   }
   &__icons{
+    margin-top: 30px;
     .section__row{
       display: flex;
       flex-wrap: wrap;
@@ -52,5 +59,85 @@
   }
   &--description{
     text-align: center;
+  }
+  &--infographic{
+    width: 100%;
+    .section__row{
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (max-width: $breackSmall){
+        justify-content:space-around;
+        text-align: center;
+      }
+      &:nth-child(even){
+        justify-content:flex-end;
+      }
+      .section__col{
+        width: 50%;
+        @media screen and (max-width: $breackSmall){
+          width: 100%;
+        }
+        &__img{
+          width: 200px;
+        }
+        &--text{
+          width: 30%;
+          @media screen and (max-width: $breackSmall){
+            width: 100%;
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+  &--calltoaction{
+    text-align: center;
+    .section__title{
+      font-size: 220%;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+.quote-box{
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background: $quoteBoxBgColor;
+  padding: $quoteBoxPadding;
+  border: 1px solid $quoteBoxBorderColor;
+  border-radius: $quoteBoxBorderRadius;
+  text-align: left;
+  &:before{
+    @include fontawesome("\f10d", 0, 900);
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    left: 0;
+    font-size: 30px;
+    color: $blueColor;
+  }
+  p{
+    margin-bottom: 20px;
+  }
+  &__source{
+    display: flex;
+    align-items: center;
+    &__avatar{
+      width: 50px;
+      margin-right: 20px;
+    }
+    &__text{
+      span{
+        display: block;
+      }
+    }
+    &__name{
+      color: $quoteNameColor;
+    }
+    &__position{
+      font-size: 90%;
+    }
   }
 }

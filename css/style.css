@@ -57,6 +57,9 @@ a {
 a:hover, a:active, a:focus, a.active {
   color: #2c4792;
 }
+a.link-arrow {
+  line-height: 4em;
+}
 a.link-arrow::after {
   content: "\F061";
   display: inline-block;
@@ -134,8 +137,8 @@ a.link-arrow::after {
 .nav__item .nav__link:not(:only-child)::after {
   content: "\F0D7";
   display: inline-block;
-  font-weight: 900;
   font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
@@ -204,6 +207,7 @@ a.link-arrow::after {
 }
 .main__row {
   width: 100%;
+  padding: 50px 0;
 }
 .main__row--bisque {
   background: #ffe3cd;
@@ -216,6 +220,7 @@ a.link-arrow::after {
 }
 .section__row {
   width: 100%;
+  margin-bottom: 30px;
 }
 .section__row:after {
   content: "";
@@ -226,8 +231,13 @@ a.link-arrow::after {
   padding-bottom: 60px;
   border-bottom: 1px solid #5c4634;
 }
-.section__title {
-  margin: 80px 0;
+.section__title__icon {
+  vertical-align: sub;
+  margin-left: 5px;
+  height: 24px;
+}
+.section__icons {
+  margin-top: 30px;
 }
 .section__icons .section__row {
   display: flex;
@@ -251,4 +261,94 @@ a.link-arrow::after {
 }
 .section--description {
   text-align: center;
+}
+.section--infographic {
+  width: 100%;
+}
+.section--infographic .section__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 998px) {
+  .section--infographic .section__row {
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+.section--infographic .section__row:nth-child(even) {
+  justify-content: flex-end;
+}
+.section--infographic .section__row .section__col {
+  width: 50%;
+}
+@media screen and (max-width: 998px) {
+  .section--infographic .section__row .section__col {
+    width: 100%;
+  }
+}
+.section--infographic .section__row .section__col__img {
+  width: 200px;
+}
+.section--infographic .section__row .section__col--text {
+  width: 30%;
+}
+@media screen and (max-width: 998px) {
+  .section--infographic .section__row .section__col--text {
+    width: 100%;
+    order: 2;
+  }
+}
+.section--calltoaction {
+  text-align: center;
+}
+.section--calltoaction .section__title {
+  font-size: 220%;
+  margin-bottom: 30px;
+}
+
+.quote-box {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #2c4792;
+  border-radius: 10px;
+  text-align: left;
+}
+.quote-box:before {
+  content: "\F10D";
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin-left: 0;
+  position: absolute;
+  z-index: 1;
+  top: -15px;
+  left: 0;
+  font-size: 30px;
+  color: #2c4792;
+}
+.quote-box p {
+  margin-bottom: 20px;
+}
+.quote-box__source {
+  display: flex;
+  align-items: center;
+}
+.quote-box__source__avatar {
+  width: 50px;
+  margin-right: 20px;
+}
+.quote-box__source__text span {
+  display: block;
+}
+.quote-box__source__name {
+  color: #2c4792;
+}
+.quote-box__source__position {
+  font-size: 90%;
 }

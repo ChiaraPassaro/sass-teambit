@@ -33,14 +33,7 @@
       padding-right: 0;
     }
     .nav__link:not(:only-child)::after{
-      content:"\f0d7";
-      display: inline-block;
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      margin-left: 5px;
+      @include fontawesome("\f0d7", 5px, 900);
     }
     &:hover,
     &:active,
