@@ -1,10 +1,16 @@
 .main{
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+  &__row{
+    width: 100%;
+    &--bisque{
+      background: $pinkBisqueColor;
+    }
+  }
 }
 
 .section{
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   overflow: hidden;
   &__row{

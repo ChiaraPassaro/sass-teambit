@@ -16,13 +16,6 @@ body {
   position: relative;
 }
 
-.wrapper__row {
-  width: 100%;
-}
-.wrapper__row--bisque {
-  background: #ffe3cd;
-}
-
 .responsive {
   width: 100%;
 }
@@ -206,12 +199,18 @@ a.link-arrow::after {
 }
 
 .main {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
+}
+.main__row {
+  width: 100%;
+}
+.main__row--bisque {
+  background: #ffe3cd;
 }
 
 .section {
-  width: 100%;
+  width: 80%;
   margin: 0 auto;
   overflow: hidden;
 }
