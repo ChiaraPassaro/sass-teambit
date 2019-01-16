@@ -117,6 +117,35 @@ a.link-blue:hover, a.link-blue:active, a.link-blue:focus, a.link-blue.active {
   font-size: 80%;
 }
 
+.chat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+}
+.chat__icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  border-radius: 100%;
+  background: url(../img/chat.svg) no-repeat #2c4792 center center;
+  cursor: pointer;
+}
+.chat__icon .chat__msg-unread {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  background: red;
+  border-radius: 100%;
+}
+
 .header {
   width: 80%;
   height: 70px;
@@ -373,6 +402,7 @@ a.link-blue:hover, a.link-blue:active, a.link-blue:focus, a.link-blue.active {
 }
 .footer__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 80%;
   margin: 60px auto;
@@ -383,10 +413,25 @@ a.link-blue:hover, a.link-blue:active, a.link-blue:focus, a.link-blue.active {
 .footer__col:not(:last-child) {
   margin-right: 10px;
 }
+.footer__col:not(.footer__col--about) {
+  max-width: calc(((100%/6) * 1) - 10px * 6);
+}
+@media screen and (max-width: 998px) {
+  .footer__col:not(.footer__col--about) {
+    max-width: calc((100% / 3) - 20px);
+    width: calc((100% / 3) - 20px);
+    margin: 20px 10px;
+  }
+}
 .footer__col--about {
   display: flex;
   align-items: flex-start;
   width: calc(((100%/6) * 2) - 10px * 6);
+}
+@media screen and (max-width: 998px) {
+  .footer__col--about {
+    width: 100%;
+  }
 }
 .footer__col--about .footer__logo {
   width: 140px;

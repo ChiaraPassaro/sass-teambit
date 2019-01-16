@@ -2,6 +2,7 @@
   text-align: center;
   &__row{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 80%;
     margin: 60px auto;
@@ -10,12 +11,22 @@
     text-align: left;
     &:not(:last-child){
       margin-right: 10px;
-
+    }
+    &:not(.footer__col--about){
+      max-width: calc(((100%/6) * 1) - 10px * 6);
+      @media screen and (max-width: $breackSmall){
+        max-width:calc((100% / 3) - 20px);
+        width: calc((100% / 3) - 20px);
+        margin: 20px 10px;
+      }
     }
     &--about{
       display: flex;
       align-items: flex-start;
       width: calc(((100%/6) * 2) - 10px * 6);
+      @media screen and (max-width: $breackSmall){
+        width: 100%;
+      }
       .footer__logo{
         width: 140px;
         margin-right: 20px;
