@@ -15,16 +15,21 @@ body{
   position: relative;
 }
 
-.container{
-  width: 80%;
-  margin: 0 auto;
+.wrapper__row{
+  width: 100%;
+  &--bisque{
+    background: $pinkBisqueColor;
+  }
 }
 
+.responsive{
+  width: 100%;
+}
 //Typografy
 @for $i from 1 through 6 {
   h#{$i} {
     font-size: $headingFontSizeMax / $i;
-    line-height: $headingLineHeightMax / $i;
+    line-height: $headingLineHeightMax;
   }
 }
 
@@ -49,6 +54,7 @@ a{
     margin-left: 5px;
   }
 }
+
 
 //BUTTONS
 .btn{

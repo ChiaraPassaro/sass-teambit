@@ -1,11 +1,9 @@
 .header{
+  width: 80%;
   height: $headerHeigh;
+  margin: 0 auto;
   border-bottom: 1px solid $brownColor;
-  &__nav{
-    width: 80%;
-    margin: 0 auto;
-  }
-  &.fixed{
+  &--fixed{
     position: fixed;
     top: 0;
     left: 0;
@@ -31,6 +29,9 @@
     padding: 10px;
     line-height: $navLineHeigh;
     position: relative;
+    &:last-child{
+      padding-right: 0;
+    }
     .nav__link:not(:only-child)::after{
       content:"\f0d7";
       display: inline-block;

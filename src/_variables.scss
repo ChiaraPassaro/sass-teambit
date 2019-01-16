@@ -3,6 +3,7 @@ $blueColor: #2c4792;
 $brownColor: #5c4634;
 $whiteColor: #fff;
 $blackColor: #000;
+$pinkBisqueColor: #ffe3cd;
 
 //Typografy
 $fontFamilyDefault: 'Montserrat', sans-serif;
@@ -11,7 +12,7 @@ $fontSizeDefault: 14px;
 $lineHeightDefault: 24px;
 
 $headingFontSizeMax: 2.8em;
-$headingLineHeightMax: 1.5em;
+$headingLineHeightMax: 1.7em;
 
 //Links
 $linkColorDefault: $brownColor;
@@ -33,11 +34,14 @@ $btnBlueHoverColor: $blueColor;
 $btnBlueHoverBgColor: darken($btnBlueBgColor, 10%);
 $btnBlueBorderColor : $blueColor;
 
-//header
+//HEADER
 $headerHeigh: 70px;
 
-//nav
+//NAV
 $navLineHeigh: 30px;
 $navSubBgColor: #fff;
 $navSubBorderColor: #e1ddd4;
 $navSubBorderRadius: 7px;
+
+//MEDIA QUERY
+$breackSmall: 998px;

@@ -16,39 +16,45 @@ body {
   position: relative;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
+.wrapper__row {
+  width: 100%;
+}
+.wrapper__row--bisque {
+  background: #ffe3cd;
+}
+
+.responsive {
+  width: 100%;
 }
 
 h1 {
   font-size: 2.8em;
-  line-height: 1.5em;
+  line-height: 1.7em;
 }
 
 h2 {
   font-size: 1.4em;
-  line-height: 0.75em;
+  line-height: 1.7em;
 }
 
 h3 {
   font-size: 0.9333333333em;
-  line-height: 0.5em;
+  line-height: 1.7em;
 }
 
 h4 {
   font-size: 0.7em;
-  line-height: 0.375em;
+  line-height: 1.7em;
 }
 
 h5 {
   font-size: 0.56em;
-  line-height: 0.3em;
+  line-height: 1.7em;
 }
 
 h6 {
   font-size: 0.4666666667em;
-  line-height: 0.25em;
+  line-height: 1.7em;
 }
 
 a {
@@ -101,14 +107,12 @@ a.link-arrow::after {
 }
 
 .header {
+  width: 80%;
   height: 70px;
+  margin: 0 auto;
   border-bottom: 1px solid #5c4634;
 }
-.header__nav {
-  width: 80%;
-  margin: 0 auto;
-}
-.header.fixed {
+.header--fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -130,6 +134,9 @@ a.link-arrow::after {
   padding: 10px;
   line-height: 30px;
   position: relative;
+}
+.nav__item:last-child {
+  padding-right: 0;
 }
 .nav__item .nav__link:not(:only-child)::after {
   content: "\F0D7";
@@ -172,13 +179,22 @@ a.link-arrow::after {
 
 .jumbotron {
   width: 80%;
-  margin: 0 auto;
+  margin: 60px auto;
   padding: 30px 0;
-  background: url("../img/illustration-main.jpg") top right no-repeat;
-  background-size: contain;
 }
 .jumbotron__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.jumbotron__left, .jumbotron__right {
+  min-width: 400px;
   width: 50%;
+}
+@media screen and (max-width: 998px) {
+  .jumbotron__left, .jumbotron__right {
+    width: 100%;
+    text-align: center;
+  }
 }
 .jumbotron__text {
   margin: 20px 0;
@@ -187,4 +203,53 @@ a.link-arrow::after {
 }
 .jumbotron__buttons a {
   margin: 15px 0;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.section__row {
+  width: 100%;
+}
+.section__row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.section__row--border-bottom {
+  padding-bottom: 60px;
+  border-bottom: 1px solid #5c4634;
+}
+.section__title {
+  margin: 80px 0;
+}
+.section__icons .section__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section__icon {
+  width: calc((100% / 3) - 40px * 3);
+  margin: 20px 40px;
+}
+@media screen and (max-width: 998px) {
+  .section__icon {
+    width: 100%;
+  }
+}
+.section__icon__img {
+  max-height: 100px;
+}
+.section__icon:only-child .section__icon__img {
+  max-height: 210px;
+}
+.section--description {
+  text-align: center;
 }
