@@ -60,6 +60,15 @@ a{
       margin-left: 5px;
     }
   }
+  &.link-blue{
+    color: $blueColor;
+    &:hover,
+    &:active,
+    &:focus,
+    &.active{
+      text-decoration: underline;
+    }
+  }
 }
 
 
@@ -98,4 +107,13 @@ a{
     }
   }
 
+}
+
+//Menu
+.menu__list{
+  list-style: none;
+}
+.menu__item{
+  line-height: $menuLineHeight;
+  font-size: 80%;
 }

@@ -1,0 +1,30 @@
+.footer{
+  text-align: center;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 60px auto;
+  }
+  &__col{
+    text-align: left;
+    &:not(:last-child){
+      margin-right: 10px;
+
+    }
+    &--about{
+      display: flex;
+      align-items: flex-start;
+      width: calc(((100%/6) * 2) - 10px * 6);
+      .footer__logo{
+        width: 140px;
+        margin-right: 20px;
+      }
+      p{
+        font-size: 90%;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

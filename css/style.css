@@ -70,6 +70,12 @@ a.link-arrow::after {
   text-rendering: auto;
   margin-left: 5px;
 }
+a.link-blue {
+  color: #2c4792;
+}
+a.link-blue:hover, a.link-blue:active, a.link-blue:focus, a.link-blue.active {
+  text-decoration: underline;
+}
 
 .btn {
   display: inline-block;
@@ -100,6 +106,15 @@ a.link-arrow::after {
 .btn--blue:hover, .btn--blue:active, .btn--blue:focus {
   color: #fff;
   background: #20346b;
+}
+
+.menu__list {
+  list-style: none;
+}
+
+.menu__item {
+  line-height: 28.8px;
+  font-size: 80%;
 }
 
 .header {
@@ -351,4 +366,33 @@ a.link-arrow::after {
 }
 .quote-box__source__position {
   font-size: 90%;
+}
+
+.footer {
+  text-align: center;
+}
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 60px auto;
+}
+.footer__col {
+  text-align: left;
+}
+.footer__col:not(:last-child) {
+  margin-right: 10px;
+}
+.footer__col--about {
+  display: flex;
+  align-items: flex-start;
+  width: calc(((100%/6) * 2) - 10px * 6);
+}
+.footer__col--about .footer__logo {
+  width: 140px;
+  margin-right: 20px;
+}
+.footer__col--about p {
+  font-size: 90%;
+  font-weight: bold;
 }
