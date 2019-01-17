@@ -1,6 +1,9 @@
 //Jumbotron
 .jumbotron{
-  width: 80%;
+  width: $widthContainerBreackSmall;
+  @media screen and (max-width: $breackXSmall){
+    width: $widthContainerBreackXSmall;
+  }
   margin: 60px auto;
   padding: 30px 0;
   // background: url(../img/illustration-main.jpg) top right no-repeat;

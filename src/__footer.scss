@@ -4,8 +4,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
+    width: $widthContainerBreackSmall;
     margin: 60px auto;
+    @media screen and (max-width: $breackXSmall){
+      width: $widthContainerBreackXSmall;
+    }
   }
   &__col{
     text-align: left;

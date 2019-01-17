@@ -1,14 +1,20 @@
 .header{
-  width: 80%;
+  width: $widthContainerBreackSmall;
+  @media screen and (max-width: $breackXSmall){
+    width: $widthContainerBreackXSmall;
+  }
   height: $headerHeigh;
   margin: 0 auto;
   border-bottom: 1px solid $brownColor;
   &--fixed{
     position: fixed;
-    top: 0;
+    top: -$headerHeigh;
     left: 0;
     width: 100%;
+    padding: 0 10%;
+    background: $whiteColor;
     box-shadow: 0px 0px 2px rgba($blackColor, .2);
+    z-index: 3;
   }
 }
 

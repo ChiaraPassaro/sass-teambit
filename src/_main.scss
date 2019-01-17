@@ -11,7 +11,10 @@
 }
 
 .section{
-  width: 80%;
+  width: $widthContainerBreackSmall;
+  @media screen and (max-width: $breackXSmall){
+    width: $widthContainerBreackXSmall;
+  }
   margin: 0 auto;
   overflow: hidden;
   &__row{
@@ -96,8 +99,13 @@
       font-size: 220%;
       margin-bottom: 30px;
     }
+    .section__buttons{
+      display: block;
+      & > a{
+        margin-bottom: 20px;
+      }
+    }
   }
-
 }
 
 .quote-box{

@@ -1,4 +1,4 @@
-//colors
+//Colors
 $blueColor: #2c4792;
 $brownColor: #5c4634;
 $whiteColor: #fff;
@@ -19,6 +19,7 @@ $headingLineHeightMax: 1.7em;
 $linkColorDefault: $brownColor;
 $linkColorHoverDefault: $blueColor;
 $lineHeightLinkArrow: 4em;
+
 // Buttons
 $btnPadding: 5px 10px;
 $btnBorderRadius: 5px;
@@ -61,3 +62,8 @@ $chatMsgUnreadColor: $whiteColor;
 
 //MEDIA QUERY
 $breackSmall: 998px;
+$breackXSmall: 550px;
+
+//Containers width for responsive
+$widthContainerBreackSmall: 80%;
+$widthContainerBreackXSmall: 90%;
