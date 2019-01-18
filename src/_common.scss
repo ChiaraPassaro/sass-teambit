@@ -55,14 +55,7 @@ a{
   &.link-arrow{
     line-height: $lineHeightLinkArrow;
     &::after{
-      content:"\f061";
-      display: inline-block;
-      font-weight: 900;
-      font-family: "Font Awesome 5 Free";
-      font-style: normal;
-      font-variant: normal;
-      text-rendering: auto;
-      margin-left: 5px;
+      @include fontawesome("\f061", 5px, 900);
     }
   }
   &.link-blue{

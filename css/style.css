@@ -63,8 +63,8 @@ a.link-arrow {
 a.link-arrow::after {
   content: "\F061";
   display: inline-block;
-  font-weight: 900;
   font-family: "Font Awesome 5 Free";
+  font-weight: 900;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
