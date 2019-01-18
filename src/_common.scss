@@ -29,12 +29,17 @@ body{
 .responsive{
   width: 100%;
 }
+
 //Typografy
+$xSize: 1.1;
+$xLine: 1;
 @for $i from 1 through 6 {
   h#{$i} {
-    font-size: $headingFontSizeMax / $i;
-    line-height: $headingLineHeightMax;
+    font-size: $headingFontSizeMax / $xSize;
+    line-height: $headingLineHeightMax / $xLine;
   }
+  $xSize: $xSize+0.6;
+  $xLine: $xLine+0.09;
 }
 
 //LINKS
